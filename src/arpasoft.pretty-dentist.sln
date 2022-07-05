@@ -3,9 +3,26 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32328.378
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "app", "app", "{F7B0551F-649A-48DA-AC0C-D2389946D615}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "arpasoft.pretty-dentist.abstractions", "arpasoft.pretty-dentist.abstractions\arpasoft.pretty-dentist.abstractions.csproj", "{0287BC24-2F5A-4A30-BA02-1EC2034C39C5}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0287BC24-2F5A-4A30-BA02-1EC2034C39C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0287BC24-2F5A-4A30-BA02-1EC2034C39C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0287BC24-2F5A-4A30-BA02-1EC2034C39C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0287BC24-2F5A-4A30-BA02-1EC2034C39C5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0287BC24-2F5A-4A30-BA02-1EC2034C39C5} = {F7B0551F-649A-48DA-AC0C-D2389946D615}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A6226B4A-3BFB-4E28-9A25-5ECE0B3FDC86}
