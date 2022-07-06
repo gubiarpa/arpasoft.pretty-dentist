@@ -1,6 +1,6 @@
 ﻿namespace arpasoft.pretty_dentist.winclient
 {
-    partial class Form1
+    partial class FrmLogin
     {
         /// <summary>
         ///  Required designer variable.
