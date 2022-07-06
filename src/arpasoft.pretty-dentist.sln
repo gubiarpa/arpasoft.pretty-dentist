@@ -7,6 +7,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "app", "app", "{F7B0551F-649
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "arpasoft.pretty-dentist.abstractions", "arpasoft.pretty-dentist.abstractions\arpasoft.pretty-dentist.abstractions.csproj", "{0287BC24-2F5A-4A30-BA02-1EC2034C39C5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "arpasoft.pretty-dentist.repository", "arpasoft.pretty-dentist.repository\arpasoft.pretty-dentist.repository.csproj", "{3190F5D5-0D44-4863-A719-730F4F944AED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,12 +19,17 @@ Global
 		{0287BC24-2F5A-4A30-BA02-1EC2034C39C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0287BC24-2F5A-4A30-BA02-1EC2034C39C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0287BC24-2F5A-4A30-BA02-1EC2034C39C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3190F5D5-0D44-4863-A719-730F4F944AED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3190F5D5-0D44-4863-A719-730F4F944AED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3190F5D5-0D44-4863-A719-730F4F944AED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3190F5D5-0D44-4863-A719-730F4F944AED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{0287BC24-2F5A-4A30-BA02-1EC2034C39C5} = {F7B0551F-649A-48DA-AC0C-D2389946D615}
+		{3190F5D5-0D44-4863-A719-730F4F944AED} = {F7B0551F-649A-48DA-AC0C-D2389946D615}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A6226B4A-3BFB-4E28-9A25-5ECE0B3FDC86}
