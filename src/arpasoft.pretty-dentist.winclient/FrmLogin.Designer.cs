@@ -28,20 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtIUser = new System.Windows.Forms.TextBox();
+            this.txtUser = new System.Windows.Forms.TextBox();
             this.lblUser = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
             this.lblPassword = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // txtIUser
+            // txtUser
             // 
-            this.txtIUser.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.txtIUser.Location = new System.Drawing.Point(23, 52);
-            this.txtIUser.Name = "txtIUser";
-            this.txtIUser.Size = new System.Drawing.Size(177, 23);
-            this.txtIUser.TabIndex = 0;
+            this.txtUser.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.txtUser.Location = new System.Drawing.Point(23, 52);
+            this.txtUser.Name = "txtUser";
+            this.txtUser.Size = new System.Drawing.Size(177, 23);
+            this.txtUser.TabIndex = 0;
+            this.txtUser.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUser_KeyPress);
             // 
             // lblUser
             // 
@@ -52,14 +53,15 @@
             this.lblUser.Text = "Usuario";
             this.lblUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // textBox1
+            // txtPassword
             // 
-            this.textBox1.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.textBox1.Location = new System.Drawing.Point(23, 122);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(177, 23);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.UseSystemPasswordChar = true;
+            this.txtPassword.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.txtPassword.Location = new System.Drawing.Point(23, 122);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(177, 23);
+            this.txtPassword.TabIndex = 1;
+            this.txtPassword.UseSystemPasswordChar = true;
+            this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
             // 
             // lblPassword
             // 
@@ -78,6 +80,7 @@
             this.btnLogin.TabIndex = 2;
             this.btnLogin.Text = "Ingresar";
             this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // FrmLogin
             // 
@@ -88,8 +91,8 @@
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.lblUser);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.txtIUser);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.txtUser);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmLogin";
@@ -101,9 +104,9 @@
 
         #endregion
 
-        private TextBox txtIUser;
+        private TextBox txtUser;
         private Label lblUser;
-        private TextBox textBox1;
+        private TextBox txtPassword;
         private Label lblPassword;
         private Button btnLogin;
     }
