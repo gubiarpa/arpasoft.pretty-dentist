@@ -12,7 +12,8 @@
 
         private void FrmPatient_Load(object sender, EventArgs e)
         {
-
+            txtDNI.Focus();
+            this.Refresh();
         }
 
         private void FrmPatient_FormClosed(object sender, FormClosedEventArgs e)

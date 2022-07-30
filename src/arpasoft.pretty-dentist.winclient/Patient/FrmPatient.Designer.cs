@@ -30,6 +30,7 @@
         {
             this.tabPatient = new System.Windows.Forms.TabControl();
             this.tabPatientList = new System.Windows.Forms.TabPage();
+            this.chkIsVerified = new System.Windows.Forms.CheckBox();
             this.datDateOfBirth = new System.Windows.Forms.DateTimePicker();
             this.txtTelephone = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
@@ -44,12 +45,11 @@
             this.lblDNI = new System.Windows.Forms.Label();
             this.tabPatientDetail = new System.Windows.Forms.TabPage();
             this.grpManagement = new System.Windows.Forms.GroupBox();
+            this.btnRemove = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
             this.btnNew = new System.Windows.Forms.Button();
             this.grpGrid = new System.Windows.Forms.GroupBox();
             this.dgvPatient = new System.Windows.Forms.DataGridView();
-            this.btnEdit = new System.Windows.Forms.Button();
-            this.chkIsVerified = new System.Windows.Forms.CheckBox();
-            this.btnRemove = new System.Windows.Forms.Button();
             this.tabPatient.SuspendLayout();
             this.tabPatientList.SuspendLayout();
             this.tabPatientDetail.SuspendLayout();
@@ -95,6 +95,16 @@
             this.tabPatientList.Text = "Detalle";
             this.tabPatientList.UseVisualStyleBackColor = true;
             // 
+            // chkIsVerified
+            // 
+            this.chkIsVerified.AutoSize = true;
+            this.chkIsVerified.Location = new System.Drawing.Point(432, 285);
+            this.chkIsVerified.Name = "chkIsVerified";
+            this.chkIsVerified.Size = new System.Drawing.Size(116, 29);
+            this.chkIsVerified.TabIndex = 6;
+            this.chkIsVerified.Text = "Verificado";
+            this.chkIsVerified.UseVisualStyleBackColor = true;
+            // 
             // datDateOfBirth
             // 
             this.datDateOfBirth.CustomFormat = "dd/MM/yyyy";
@@ -107,13 +117,16 @@
             // txtTelephone
             // 
             this.txtTelephone.Location = new System.Drawing.Point(250, 283);
+            this.txtTelephone.MaxLength = 9;
             this.txtTelephone.Name = "txtTelephone";
             this.txtTelephone.Size = new System.Drawing.Size(163, 31);
             this.txtTelephone.TabIndex = 5;
             // 
             // txtName
             // 
+            this.txtName.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtName.Location = new System.Drawing.Point(250, 183);
+            this.txtName.MaxLength = 200;
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(402, 31);
             this.txtName.TabIndex = 3;
@@ -147,7 +160,9 @@
             // 
             // txtMaternalSurname
             // 
+            this.txtMaternalSurname.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtMaternalSurname.Location = new System.Drawing.Point(250, 133);
+            this.txtMaternalSurname.MaxLength = 200;
             this.txtMaternalSurname.Name = "txtMaternalSurname";
             this.txtMaternalSurname.Size = new System.Drawing.Size(402, 31);
             this.txtMaternalSurname.TabIndex = 2;
@@ -163,7 +178,9 @@
             // 
             // txtPaternalSurname
             // 
+            this.txtPaternalSurname.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPaternalSurname.Location = new System.Drawing.Point(250, 83);
+            this.txtPaternalSurname.MaxLength = 200;
             this.txtPaternalSurname.Name = "txtPaternalSurname";
             this.txtPaternalSurname.Size = new System.Drawing.Size(402, 31);
             this.txtPaternalSurname.TabIndex = 1;
@@ -180,6 +197,7 @@
             // txtDNI
             // 
             this.txtDNI.Location = new System.Drawing.Point(250, 33);
+            this.txtDNI.MaxLength = 8;
             this.txtDNI.Name = "txtDNI";
             this.txtDNI.Size = new System.Drawing.Size(402, 31);
             this.txtDNI.TabIndex = 0;
@@ -219,6 +237,24 @@
             this.grpManagement.TabStop = false;
             this.grpManagement.Text = "Acciones";
             // 
+            // btnRemove
+            // 
+            this.btnRemove.Location = new System.Drawing.Point(280, 42);
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.Size = new System.Drawing.Size(112, 34);
+            this.btnRemove.TabIndex = 2;
+            this.btnRemove.Text = "&Eliminar";
+            this.btnRemove.UseVisualStyleBackColor = true;
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.Location = new System.Drawing.Point(150, 42);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(112, 34);
+            this.btnEdit.TabIndex = 2;
+            this.btnEdit.Text = "&Editar";
+            this.btnEdit.UseVisualStyleBackColor = true;
+            // 
             // btnNew
             // 
             this.btnNew.Location = new System.Drawing.Point(20, 42);
@@ -252,34 +288,6 @@
             this.dgvPatient.RowTemplate.Height = 33;
             this.dgvPatient.Size = new System.Drawing.Size(1248, 491);
             this.dgvPatient.TabIndex = 0;
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.Location = new System.Drawing.Point(150, 42);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(112, 34);
-            this.btnEdit.TabIndex = 2;
-            this.btnEdit.Text = "&Editar";
-            this.btnEdit.UseVisualStyleBackColor = true;
-            // 
-            // chkIsVerified
-            // 
-            this.chkIsVerified.AutoSize = true;
-            this.chkIsVerified.Location = new System.Drawing.Point(432, 285);
-            this.chkIsVerified.Name = "chkIsVerified";
-            this.chkIsVerified.Size = new System.Drawing.Size(116, 29);
-            this.chkIsVerified.TabIndex = 6;
-            this.chkIsVerified.Text = "Verificado";
-            this.chkIsVerified.UseVisualStyleBackColor = true;
-            // 
-            // btnRemove
-            // 
-            this.btnRemove.Location = new System.Drawing.Point(280, 42);
-            this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(112, 34);
-            this.btnRemove.TabIndex = 2;
-            this.btnRemove.Text = "&Eliminar";
-            this.btnRemove.UseVisualStyleBackColor = true;
             // 
             // FrmPatient
             // 

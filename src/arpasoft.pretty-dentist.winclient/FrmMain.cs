@@ -24,8 +24,8 @@ namespace arpasoft.pretty_dentist.winclient
 
         private void btnOptionPatients_Click(object sender, EventArgs e)
         {
-            _patientForm?.Show();
             this.Hide();
+            _patientForm?.Show();
         }
 
         private void FrmMain_FormClosed(object sender, FormClosedEventArgs e)
