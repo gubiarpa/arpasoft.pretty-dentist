@@ -1,34 +1,38 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using arpasoft.pretty_dentist.winclient.Patient;
 
 namespace arpasoft.pretty_dentist.winclient
 {
     public partial class FrmMain : Form
     {
-        private Form _parentForm;
+        #region Attributtes
+        private Form _loginForm;
+        private Form _patientForm;
+        #endregion
 
         public FrmMain(Form parentForm)
         {
             InitializeComponent();
-            _parentForm = parentForm;
+            _loginForm = parentForm;
+            _patientForm = new FrmPatient(this);
         }
 
-        private void optionSession_CloseSession_Click(object sender, EventArgs e)
+        #region Events
+        private void FrmMain_Load(object sender, EventArgs e)
         {
-            this.Close();
-            _parentForm.Close();
+            _loginForm.Hide();
         }
 
-        private void optionView_Patients_Click(object sender, EventArgs e)
+        private void btnOptionPatients_Click(object sender, EventArgs e)
         {
-
+            _patientForm?.Show();
+            this.Hide();
         }
+
+        private void FrmMain_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            _loginForm?.Close();
+            _loginForm?.Dispose();
+        }
+        #endregion
     }
 }

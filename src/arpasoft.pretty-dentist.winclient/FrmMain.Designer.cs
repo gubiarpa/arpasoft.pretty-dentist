@@ -28,80 +28,54 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.mainMenu = new System.Windows.Forms.MenuStrip();
-            this.optionSession = new System.Windows.Forms.ToolStripMenuItem();
-            this.optionSession_CloseSession = new System.Windows.Forms.ToolStripMenuItem();
-            this.optionView = new System.Windows.Forms.ToolStripMenuItem();
-            this.optionView_Patients = new System.Windows.Forms.ToolStripMenuItem();
-            this.mainMenu.SuspendLayout();
+            this.btnOptionPatients = new System.Windows.Forms.Button();
+            this.grpMaintenance = new System.Windows.Forms.GroupBox();
+            this.grpMaintenance.SuspendLayout();
             this.SuspendLayout();
             // 
-            // mainMenu
+            // btnOptionPatients
             // 
-            this.mainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.optionSession,
-            this.optionView});
-            this.mainMenu.Location = new System.Drawing.Point(0, 0);
-            this.mainMenu.Name = "mainMenu";
-            this.mainMenu.Size = new System.Drawing.Size(800, 24);
-            this.mainMenu.TabIndex = 1;
-            this.mainMenu.Text = "menuStrip1";
+            this.btnOptionPatients.Location = new System.Drawing.Point(34, 54);
+            this.btnOptionPatients.Name = "btnOptionPatients";
+            this.btnOptionPatients.Size = new System.Drawing.Size(266, 34);
+            this.btnOptionPatients.TabIndex = 0;
+            this.btnOptionPatients.Text = "Pacientes";
+            this.btnOptionPatients.UseVisualStyleBackColor = true;
+            this.btnOptionPatients.Click += new System.EventHandler(this.btnOptionPatients_Click);
             // 
-            // optionSession
+            // grpMaintenance
             // 
-            this.optionSession.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.optionSession_CloseSession});
-            this.optionSession.Name = "optionSession";
-            this.optionSession.Size = new System.Drawing.Size(53, 20);
-            this.optionSession.Text = "&Sesión";
-            // 
-            // optionSession_CloseSession
-            // 
-            this.optionSession_CloseSession.Name = "optionSession_CloseSession";
-            this.optionSession_CloseSession.Size = new System.Drawing.Size(180, 22);
-            this.optionSession_CloseSession.Text = "&Cerrar Sesión";
-            this.optionSession_CloseSession.Click += new System.EventHandler(this.optionSession_CloseSession_Click);
-            // 
-            // optionView
-            // 
-            this.optionView.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.optionView_Patients});
-            this.optionView.Name = "optionView";
-            this.optionView.Size = new System.Drawing.Size(35, 20);
-            this.optionView.Text = "&Ver";
-            // 
-            // optionView_Patients
-            // 
-            this.optionView_Patients.Name = "optionView_Patients";
-            this.optionView_Patients.Size = new System.Drawing.Size(124, 22);
-            this.optionView_Patients.Text = "&Pacientes";
-            this.optionView_Patients.Click += new System.EventHandler(this.optionView_Patients_Click);
+            this.grpMaintenance.Controls.Add(this.btnOptionPatients);
+            this.grpMaintenance.Location = new System.Drawing.Point(12, 12);
+            this.grpMaintenance.Name = "grpMaintenance";
+            this.grpMaintenance.Size = new System.Drawing.Size(831, 178);
+            this.grpMaintenance.TabIndex = 1;
+            this.grpMaintenance.TabStop = false;
+            this.grpMaintenance.Text = "Mantenimiento";
             // 
             // FrmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.mainMenu);
-            this.IsMdiContainer = true;
-            this.MainMenuStrip = this.mainMenu;
+            this.ClientSize = new System.Drawing.Size(869, 213);
+            this.Controls.Add(this.grpMaintenance);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmMain";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.mainMenu.ResumeLayout(false);
-            this.mainMenu.PerformLayout();
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmMain_FormClosed);
+            this.Load += new System.EventHandler(this.FrmMain_Load);
+            this.grpMaintenance.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private MenuStrip mainMenu;
-        private ToolStripMenuItem optionSession;
-        private ToolStripMenuItem optionView;
-        private ToolStripMenuItem optionView_Patients;
-        private ToolStripMenuItem optionSession_CloseSession;
+        private Button btnOptionPatients;
+        private GroupBox grpMaintenance;
     }
 }
