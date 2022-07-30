@@ -43,8 +43,19 @@
             this.txtDNI = new System.Windows.Forms.TextBox();
             this.lblDNI = new System.Windows.Forms.Label();
             this.tabPatientDetail = new System.Windows.Forms.TabPage();
+            this.grpManagement = new System.Windows.Forms.GroupBox();
+            this.btnNew = new System.Windows.Forms.Button();
+            this.grpGrid = new System.Windows.Forms.GroupBox();
+            this.dgvPatient = new System.Windows.Forms.DataGridView();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.chkIsVerified = new System.Windows.Forms.CheckBox();
+            this.btnRemove = new System.Windows.Forms.Button();
             this.tabPatient.SuspendLayout();
             this.tabPatientList.SuspendLayout();
+            this.tabPatientDetail.SuspendLayout();
+            this.grpManagement.SuspendLayout();
+            this.grpGrid.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPatient)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPatient
@@ -57,12 +68,13 @@
             this.tabPatient.Location = new System.Drawing.Point(12, 12);
             this.tabPatient.Name = "tabPatient";
             this.tabPatient.SelectedIndex = 0;
-            this.tabPatient.Size = new System.Drawing.Size(1112, 761);
+            this.tabPatient.Size = new System.Drawing.Size(1293, 696);
             this.tabPatient.TabIndex = 0;
             // 
             // tabPatientList
             // 
             this.tabPatientList.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabPatientList.Controls.Add(this.chkIsVerified);
             this.tabPatientList.Controls.Add(this.datDateOfBirth);
             this.tabPatientList.Controls.Add(this.txtTelephone);
             this.tabPatientList.Controls.Add(this.txtName);
@@ -78,7 +90,7 @@
             this.tabPatientList.Location = new System.Drawing.Point(4, 34);
             this.tabPatientList.Name = "tabPatientList";
             this.tabPatientList.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPatientList.Size = new System.Drawing.Size(1104, 723);
+            this.tabPatientList.Size = new System.Drawing.Size(1285, 658);
             this.tabPatientList.TabIndex = 0;
             this.tabPatientList.Text = "Detalle";
             this.tabPatientList.UseVisualStyleBackColor = true;
@@ -183,19 +195,97 @@
             // 
             // tabPatientDetail
             // 
+            this.tabPatientDetail.Controls.Add(this.grpManagement);
+            this.tabPatientDetail.Controls.Add(this.grpGrid);
             this.tabPatientDetail.Location = new System.Drawing.Point(4, 34);
             this.tabPatientDetail.Name = "tabPatientDetail";
             this.tabPatientDetail.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPatientDetail.Size = new System.Drawing.Size(1104, 723);
+            this.tabPatientDetail.Size = new System.Drawing.Size(1285, 658);
             this.tabPatientDetail.TabIndex = 1;
             this.tabPatientDetail.Text = "Lista";
             this.tabPatientDetail.UseVisualStyleBackColor = true;
+            // 
+            // grpManagement
+            // 
+            this.grpManagement.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.grpManagement.Controls.Add(this.btnRemove);
+            this.grpManagement.Controls.Add(this.btnEdit);
+            this.grpManagement.Controls.Add(this.btnNew);
+            this.grpManagement.Location = new System.Drawing.Point(6, 6);
+            this.grpManagement.Name = "grpManagement";
+            this.grpManagement.Size = new System.Drawing.Size(1273, 99);
+            this.grpManagement.TabIndex = 3;
+            this.grpManagement.TabStop = false;
+            this.grpManagement.Text = "Acciones";
+            // 
+            // btnNew
+            // 
+            this.btnNew.Location = new System.Drawing.Point(20, 42);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(112, 34);
+            this.btnNew.TabIndex = 2;
+            this.btnNew.Text = "&Nuevo";
+            this.btnNew.UseVisualStyleBackColor = true;
+            // 
+            // grpGrid
+            // 
+            this.grpGrid.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.grpGrid.Controls.Add(this.dgvPatient);
+            this.grpGrid.Location = new System.Drawing.Point(6, 111);
+            this.grpGrid.Name = "grpGrid";
+            this.grpGrid.Size = new System.Drawing.Size(1273, 541);
+            this.grpGrid.TabIndex = 1;
+            this.grpGrid.TabStop = false;
+            this.grpGrid.Text = "Data";
+            // 
+            // dgvPatient
+            // 
+            this.dgvPatient.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvPatient.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPatient.Location = new System.Drawing.Point(19, 44);
+            this.dgvPatient.Name = "dgvPatient";
+            this.dgvPatient.RowHeadersWidth = 62;
+            this.dgvPatient.RowTemplate.Height = 33;
+            this.dgvPatient.Size = new System.Drawing.Size(1248, 491);
+            this.dgvPatient.TabIndex = 0;
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.Location = new System.Drawing.Point(150, 42);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(112, 34);
+            this.btnEdit.TabIndex = 2;
+            this.btnEdit.Text = "&Editar";
+            this.btnEdit.UseVisualStyleBackColor = true;
+            // 
+            // chkIsVerified
+            // 
+            this.chkIsVerified.AutoSize = true;
+            this.chkIsVerified.Location = new System.Drawing.Point(432, 285);
+            this.chkIsVerified.Name = "chkIsVerified";
+            this.chkIsVerified.Size = new System.Drawing.Size(116, 29);
+            this.chkIsVerified.TabIndex = 6;
+            this.chkIsVerified.Text = "Verificado";
+            this.chkIsVerified.UseVisualStyleBackColor = true;
+            // 
+            // btnRemove
+            // 
+            this.btnRemove.Location = new System.Drawing.Point(280, 42);
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.Size = new System.Drawing.Size(112, 34);
+            this.btnRemove.TabIndex = 2;
+            this.btnRemove.Text = "&Eliminar";
+            this.btnRemove.UseVisualStyleBackColor = true;
             // 
             // FrmPatient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1136, 785);
+            this.ClientSize = new System.Drawing.Size(1317, 720);
             this.Controls.Add(this.tabPatient);
             this.Name = "FrmPatient";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -205,6 +295,10 @@
             this.tabPatient.ResumeLayout(false);
             this.tabPatientList.ResumeLayout(false);
             this.tabPatientList.PerformLayout();
+            this.tabPatientDetail.ResumeLayout(false);
+            this.grpManagement.ResumeLayout(false);
+            this.grpGrid.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPatient)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -226,5 +320,12 @@
         private Label lblName;
         private TextBox txtTelephone;
         private Label lblTelephone;
+        private GroupBox grpManagement;
+        private Button btnNew;
+        private GroupBox grpGrid;
+        private DataGridView dgvPatient;
+        private CheckBox chkIsVerified;
+        private Button btnEdit;
+        private Button btnRemove;
     }
 }
